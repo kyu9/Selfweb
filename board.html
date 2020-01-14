@@ -1,54 +1,135 @@
 <!doctype html>
-<html>
-<meta charset="utf-8">
-<head>
-<title>내가 가득한 웹페이지!!</title>
-
-</head>
+  <html>
+    <meta charset="utf-8">
+  <head>
+    <title>My Webpage</title>
+      <style>
+        #title{
+        color:red;
+        font-size:40px;
+        text-align:center;
+        margin:0;
+        border-bottom:10px solid black;
+        padding-bottom:30px;
+        padding-top:15px;
+      }
+      #subt{
+        font-size:25px;
+        border-right:10px;
+      }
+      .update{
+        float: left;
+      }
+      .present{
+        float: right;
+      }
+      h2{
+        font-size:40px;
+        color:gray;
+      }
+      body{
+        background-color:lightyellow;
+      }
+      a{
+        color:black;
+      }
+      .Button{
+        float:right;
+        margin:10px;
+        border:5px solid black;
+      }
+      #grid{
+        display:grid;
+        grid-template-columns: 2fr 2fr;
+      }
+    </style>
+  </head>
 
   <body>
-  <h1>나에 대해서</h1>
-    <a href="me.html" title="ME!">Click Me!</a>
-  <br><br>
-
-  <h1>앞으로의 계획</h1>
-    <a href="plan.html" title="PLAN!">Click Me!</a>
+    <h1 id="title"><a href="me.html" title="대충 제목이라는 글">대충 제목이라는 글-----</a></h1>
     <br><br>
 
-  <h1>유용한 사이트들</h1>
-  <ul>
-    <li><a href="https://tagilog.tistory.com/579?fbclid=IwAR20zrQdp28gOGyeKRtKD5BjofuMvWq3H3Ksguykcxah1G_tJ6H5f2LLgCw" target="_blank" title="1">
-      훌륭한 프로그래머가 되고 싶다면 만들어야할 앱 8선</a></li><br>
-    <li><a href="https://brunch.co.kr/@chickenmoim/13" target="_blank" title="2">
-      미리 알아야할 개발 공부와 개발 실무의 차이</a></li><br>
-  </ul><br><br>
 
-  <h3>내가 좋아하는 사이트들! </h3>
-    <ul>
-      <li><a href="https://github.com/" target="_blank" title="깃헙">Github</a></li>
-      <li><a href="https://naver.com/" target="_blank" title="네이버">Naver</a></li>
-      <li><a href="https://DDA.AC/" target="_blank" title="따악">따아악</a></li>
-      <li><a href="https://hsreplay.net" target="_blank" title="리플넷">하스리플</a></li>
-    </ul>
-<!-- 주석이라고 생각하면 ㅇㅋ
-    <ul>
-      <li><a href="https://github.com/" target="_blank" title="깃헙"><font color="red">Github</font></a></li>
-      <li><a href="https://naver.com/" target="_blank" title="네이버"><font color="red">Naver</font></a></li>
-      <li><a href="https://DDA.AC/" target="_blank" title="따악"><font color="red">따아악</font></a></li>
-      <li><a href="https://hsreplay.net" target="_blank" title="리플넷"><font color="red">하스리플</font></a></li>
-    </ul>
-  -->
-    <br>
-    <br>
-    <strong>NoCopyrightSound(NCS)!!</strong><br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/-ObdvMkCKws" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <br>
+    <ui id="subt">
+      <li>Made by myself with searching</li>
+    </ui>
+
+    <div style="clear: both;"></div>
+
+    <p class="Button">
+      <input type="button" value="To blue!" onclick="
+      var target = document.querySelector('body');
+      var line1 = document.querySelector('h1');
+      var links = document.querySelector('a');
+      target.style.backgroundColor='blue';
+      target.style.color='white';
+      line1.style.backgroundColor='purple';
+      line1.style.borderBottomColor='blue';
+      links.style.color='white';
 
 
+      "><br>
+      <input type="button" value="To Yellow!" onclick="
+      var target = document.querySelector('body');
+      var line1 = document.querySelector('h1');
+      var links = document.querySelector('a');
+      target.style.backgroundColor='lightyellow';
+      target.style.color='black';
+      line1.style.borderBottomColor='black';
+      line1.style.backgroundColor='lightyellow';
+      links.style.color='black';
+      ">
+    </p>
 
-  </body>
+    <div id="grid">
+      <div>
+      <h2>-ings</h2>
+      <a href="plan.html" title="PLAN!">Click Me!</a>
+      </div>
+
+      <div>
+      <h2>유용한 사이트들</h2>
+        <ul>
+          <li><a href="https://tagilog.tistory.com/579?fbclid=IwAR20zrQdp28gOGyeKRtKD5BjofuMvWq3H3Ksguykcxah1G_tJ6H5f2LLgCw" target="_blank" title="1">
+            훌륭한 프로그래머가 되고 싶다면 만들어야할 앱 8선</a></li><br>
+          <li><a href="https://brunch.co.kr/@chickenmoim/13" target="_blank" title="2">
+        미리 알아야할 개발 공부와 개발 실무의 차이</a></li><br>
+        </ul>
+      </div>
+      <br>
+    </div>
+
+    <h3>즐겨찾기</h3>
+      <ul>
+        <li><a href="https://github.com/" target="_blank" title="깃헙">Github:
+        대충 농부의 심정으로 잡초 심기하는 사이트</a></li>
+        <li><a href="https://naver.com/" target="_blank" title="네이버">Naver:
+        우리나라에서 제일 큰 포털 사이트 검색활용</a></li>
+        <li><a href="https://google.co.kr/" target="_blank" title="구글">Google:
+        컴퓨터관련 검색하기 제일 좋은 포털 사이트 검색활용</a></li>
+        <li><a href="https://DDA.AC/" target="_blank" title="따악">DDaac:
+        그저 따아아아아아아아아아아아악</a></li>
+        <li><a href="https://hsreplay.net" target="_blank" title="리플넷">hsreplay:
+        등급전기준으로 전체적인 메타, 티어덱 등 정보가 젤 많음</a></li>
+      </ul>
+
+      <br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 
+      <div style="clear: both;"></div>
 
-</html>
+      <div>
+      <p class="update">  Update 20.01.14<p>
+
+
+      <p class="present">
+        <script>
+        document.write("현재날짜: ");
+        document.write(new Date().toLocaleDateString());
+        </script>
+      </p>
+
+      </div>
+    </body>
+  </html>
